@@ -162,6 +162,9 @@ $myArray = @(1, "Hello", 3.5, "World")
 $myArray
 #empty array:
 $myArray = @()
+#Add to an array:
+$myArray += "New Entry1"
+$myArray += "New Entry2"
 
 #Array of numbers from 1-54
 $myArray = (1..54)
