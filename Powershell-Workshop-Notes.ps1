@@ -47,7 +47,9 @@ Similar to what can be found in other scripting language like python or bash.
 #>
 
 
-get-help
+get-help 
+
+get-help <Command or *partial_name*>
 
 Get-help get #shows comandlets starting with get. Command also accepts a wildcard '*'
 
@@ -60,7 +62,7 @@ How to declare a Variable, Datatype.
 Variables <=> Buckets for your data
 #>
 
-#PS assignes datat ypes dynamically (sometimes not correctly)
+#PS assignes data ypes dynamically (sometimes not correctly)
 # do declare a variable:
 $Variable1 = 1
 #To get value in Variable:
@@ -151,16 +153,16 @@ Built-in
 #Arrays can hold data of various types
 $myArray1 = 1, "Hello", 3.5, "Word"
 #You can call on specific index in table. Remember that indexing starts with 0!
-$myArray1[0]
-$myArray1[1]
+$myArray1[0] #- First value
+$myArray1[1] #- Second Value
 $myArray1[2]
 $myArray1[0].GetType()
 $myArray1[1].GetType()
 
-#Anothr ay to crate an Array:
+#Another way to crate an Array:
 $myArray = @(1, "Hello", 3.5, "World")
 $myArray
-#empty array:
+#empty array (redeclare empty array):
 $myArray = @()
 #Add to an array:
 $myArray += "New Entry1"
@@ -170,7 +172,7 @@ $myArray += "New Entry2"
 $myArray = (1..54)
 $myArray
 
-#two Dimentional array of numbers:
+#Two Dimentional array of numbers:
 $myArray = ((1..12), (15..25))
 $myArray
 
@@ -333,9 +335,9 @@ Until ($i -gt 10) #Logical Reverse of Do While But Will be executed at least onc
 # FOR
 
 #Easy FOR = FOR EACH:
-$tab = "Lodz", "Warszawa", "Krakow", "Zgierzyniec"
+$tab = "NewYork", "Warsaw", "London", "Tokyo"
 foreach ($city in $tab) {
-    Write-Host "Bardzo Lubie gdy jestem przejazdem w $city" #| Out-String    
+    Write-Host "I love to visit $city" #| Out-String    
 } 
      
     
@@ -382,9 +384,10 @@ Write-Host "
          ))..)-)
         ((__/| *
 
-" 
-# Whipe out chick on screen. Don't let your colleagues see it! SOOO NSFW!!!
-
+ 
+Whipe out chick on screen. with a comandlet cls.  
+Don't let your colleagues see it! SOOO NSFW!!!
+"
 
 <#
 ===== PART 7 =====
