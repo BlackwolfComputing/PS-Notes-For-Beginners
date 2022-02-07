@@ -385,7 +385,7 @@ Write-Host "
         ((__/| *
 
  
-Whipe out chick on screen. with a comandlet cls.  
+Wipe out chick on screen. with a comandlet cls.  
 Don't let your colleagues see it! SOOO NSFW!!!
 "
 
@@ -400,11 +400,11 @@ GET-WMI / gwmi
 
 #Get-Wmi is a commandlet to gather details from Windows Management Instrumentation 
 #You need to provide WMI Class specific to details you want to get
-Get-WmiObject -class win32_NetworkAdapter -Computername TESTHOSTNAME | Out-GridView
-Get-WmiObject -class win32_NetworkAdapterConfiguration -Computername TESTHOSTNAME | Out-GridView
-gwmi -class win32_Bios -Computername TESTHOSTNAME
-gwmi -class win32_BootConfiguration -Computername TESTHOSTNAME
-gwmi -class win32_PrinterDriver -Computername TESTHOSTNAME
+Get-WmiObject -class win32_NetworkAdapter -Computername <HOSTNAME> | Out-GridView
+Get-WmiObject -class win32_NetworkAdapterConfiguration -Computername <HOSTNAME> | Out-GridView
+gwmi -class win32_Bios -Computername <HOSTNAME>
+gwmi -class win32_BootConfiguration -Computername <HOSTNAME>
+gwmi -class win32_PrinterDriver -Computername <HOSTNAME>
 
 <#
 ===== PART 8 =====
@@ -444,9 +444,9 @@ Remove-PSSession $sess #To close session
 FUNCTIONS
 
 Function or subroutine is a part of code that can be invoked by name. 
-That part of code will be executed each time you CALL on it and it may accept input in form of varible or data.
+That part of code will be executed each time you CALL on it (write the name) and it may accept input in form of varible or data.
 Functions can call on other functions that were previously declared. 
-Nested fucntion is a function that is declared within another function. It exists locally only within that function
+Nested function is a function that is declared within another function. It exists locally only within that function
 #>
 
 #Function that accepts a variable and displays it on screen in yellow font
